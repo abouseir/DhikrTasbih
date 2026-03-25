@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="Theme.DhikrTasbih" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Premium Splash Screen Theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Background matches Onyx PremiumTheme -->
+        <item name="windowSplashScreenBackground">#080D0B</item>
+        <!-- Icon matches our new Golden Crescent -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <!-- Route back to Compose theme when done -->
+        <item name="postSplashScreenTheme">@style/Theme.DhikrTasbih</item>
+        <!-- Status bar coloring -->
+        <item name="android:statusBarColor">#080D0B</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
