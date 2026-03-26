@@ -121,7 +121,7 @@ object AdhkarWidget : GlanceAppWidget() {
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             Box(
-                                modifier = GlanceModifier.size(44.dp).clickable(actionRunCallback<AdhkarPrevItemAction>()),
+                                modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<AdhkarPrevItemAction>()),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text("⟨", style = TextStyle(
@@ -139,14 +139,13 @@ object AdhkarWidget : GlanceAppWidget() {
                                     color = androidx.glance.unit.ColorProvider(
                                         if (isDone) Color(0xFF4CAF50) else Color(0xFFF5F5F5)
                                     ),
-                                    fontSize = 12.sp,
+                                    fontSize = 16.sp,
                                     textAlign = TextAlign.Center
-                                ),
-                                maxLines = 4
+                                )
                             )
 
                             Box(
-                                modifier = GlanceModifier.size(44.dp).clickable(actionRunCallback<AdhkarNextItemAction>()),
+                                modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<AdhkarNextItemAction>()),
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text("⟩", style = TextStyle(
@@ -158,13 +157,13 @@ object AdhkarWidget : GlanceAppWidget() {
                             }
                         }
 
-                        Spacer(GlanceModifier.height(6.dp))
+                        Spacer(GlanceModifier.defaultWeight())
 
                         // ── Counter: x/target or ✓ Done
                         if (isDone) {
                             Text("✓ تم", style = TextStyle(
                                 color = androidx.glance.unit.ColorProvider(Color(0xFF4CAF50)),
-                                fontSize = 22.sp, fontWeight = FontWeight.Bold
+                                fontSize = 18.sp, fontWeight = FontWeight.Bold
                             ))
                         } else {
                             val targetStr = if (item.target > 0) " / ${item.target}" else ""
@@ -172,19 +171,19 @@ object AdhkarWidget : GlanceAppWidget() {
                                 "${item.count}$targetStr",
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)),
-                                    fontSize = 32.sp, fontWeight = FontWeight.Bold
+                                    fontSize = 22.sp, fontWeight = FontWeight.Bold
                                 )
                             )
                         }
 
-                        Spacer(GlanceModifier.defaultWeight())
+                        Spacer(GlanceModifier.height(12.dp))
 
                         // ── Increment button (or Reset-cycle when done)
                         Box(
                             modifier = GlanceModifier
                                 .background(if (isDone) Color(0xFF1A1A1A) else Color(0xFFD4AF37))
-                                .cornerRadius(14.dp)
-                                .padding(horizontal = 28.dp, vertical = 9.dp)
+                                .cornerRadius(10.dp)
+                                .padding(horizontal = 16.dp, vertical = 4.dp)
                                 .clickable(
                                     if (isDone) actionRunCallback<AdhkarResetCycleAction>()
                                     else actionRunCallback<AdhkarIncrementAction>()
@@ -197,12 +196,12 @@ object AdhkarWidget : GlanceAppWidget() {
                                     color = androidx.glance.unit.ColorProvider(
                                         if (isDone) Color(0xFFD4AF37) else Color.Black
                                     ),
-                                    fontSize = 15.sp, fontWeight = FontWeight.Bold
+                                    fontSize = 12.sp, fontWeight = FontWeight.Bold
                                 )
                             )
                         }
 
-                        Spacer(GlanceModifier.height(4.dp))
+                        Spacer(GlanceModifier.height(2.dp))
                     }
                 }
             }

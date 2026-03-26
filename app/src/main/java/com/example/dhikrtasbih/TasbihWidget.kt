@@ -108,10 +108,10 @@ object TasbihWidget : GlanceAppWidget() {
                                 modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color(0xFFF5F5F5)),
-                                    fontSize = 13.sp,
+                                    fontSize = 16.sp,
                                     textAlign = TextAlign.Center
-                                ),
-                                maxLines = 4
+                                )
+
                             )
 
                             Box(
@@ -129,7 +129,7 @@ object TasbihWidget : GlanceAppWidget() {
                             }
                         }
 
-                        Spacer(modifier = GlanceModifier.height(10.dp))
+                        Spacer(modifier = GlanceModifier.defaultWeight())
 
                         // ── Counter
                         val targetTxt = if (selectedDhikr.target > 0) " / ${selectedDhikr.target}" else " / ∞"
@@ -137,19 +137,19 @@ object TasbihWidget : GlanceAppWidget() {
                             text = "${selectedDhikr.count}$targetTxt",
                             style = TextStyle(
                                 color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)),
-                                fontSize = 38.sp,
+                                fontSize = 28.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         )
 
-                        Spacer(modifier = GlanceModifier.defaultWeight())
+                        Spacer(modifier = GlanceModifier.height(12.dp))
 
                         // ── Increment button at the bottom
                         Box(
                             modifier = GlanceModifier
                                 .background(Color(0xFFD4AF37))
-                                .cornerRadius(16.dp)
-                                .padding(horizontal = 32.dp, vertical = 10.dp)
+                                .cornerRadius(10.dp)
+                                .padding(horizontal = 16.dp, vertical = 4.dp)
                                 .clickable(actionRunCallback<IncrementAction>()),
                             contentAlignment = Alignment.Center
                         ) {
@@ -157,13 +157,13 @@ object TasbihWidget : GlanceAppWidget() {
                                 text = "سَبِّحْ",
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color.Black),
-                                    fontSize = 17.sp,
+                                    fontSize = 12.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                             )
                         }
 
-                        Spacer(modifier = GlanceModifier.height(4.dp))
+                        Spacer(modifier = GlanceModifier.height(2.dp))
                     }
                 }
             }
@@ -244,4 +244,3 @@ class ResetAction : ActionCallback {
 class TasbihWidgetReceiver : GlanceAppWidgetReceiver() {
     override val glanceAppWidget: GlanceAppWidget = TasbihWidget
 }
-
