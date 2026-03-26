@@ -180,6 +180,17 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+fun vibrateDevice(context: Context, durationMs: Long = 30L) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        (context.getSystemService(Context.VIBRATOR_SERVICE) as? android.os.Vibrator)
+            ?.vibrate(android.os.VibrationEffect.createOneShot(durationMs, android.os.VibrationEffect.DEFAULT_AMPLITUDE))
+    } else {
+        @Suppress("DEPRECATION")
+        (context.getSystemService(Context.VIBRATOR_SERVICE) as? android.os.Vibrator)
+            ?.vibrate(durationMs)
+    }
+}
+
 // ==========================================
 // 2. LE CŒUR DE L'APP AVEC NAVIGATION
 // ==========================================
@@ -383,9 +394,9 @@ fun HomeScreen(categories: List<AdhkarCategory>, tasbihList: androidx.compose.ru
                         
                         if (isHapticEnabled) {
                             if (dhikr.target > 0 && newCount == dhikr.target) {
-                                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                vibrateDevice(context, 60L)
                             } else {
-                                haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                                vibrateDevice(context, 30L)
                             }
                         }
                     }
@@ -550,7 +561,9 @@ fun AdhkarCategoryCard(category: AdhkarCategory, onClick: () -> Unit) {
 @Composable
 fun AdhkarDetailScreen(category: AdhkarCategory, onBack: () -> Unit, prefs: PreferencesManager) {
     BackHandler { onBack() }
+    val context = LocalContext.current
     val haptic = LocalHapticFeedback.current
+    val isHapticEnabled = remember { prefs.getHaptic() }
     val coroutineScope = rememberCoroutineScope()
 
     val pagerState = rememberPagerState(pageCount = { category.items.size })
@@ -585,16 +598,17 @@ fun AdhkarDetailScreen(category: AdhkarCategory, onBack: () -> Unit, prefs: Pref
                             category.items[page] = currentItem.copy(count = currentItem.count + 1)
                             prefs.saveAdhkarCount(category.id, currentItem.id, category.items[page].count)
 
+                            if (isHapticEnabled) {
+                                vibrateDevice(context, if (category.items[page].count == currentItem.target) 60L else 30L)
+                            }
+
                             if (category.items[page].count == currentItem.target) {
-                                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                                 coroutineScope.launch {
                                     delay(400)
                                     if (pagerState.currentPage < category.items.size - 1) {
                                         pagerState.animateScrollToPage(pagerState.currentPage + 1)
                                     }
                                 }
-                            } else {
-                                haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
                             }
                         }
                     }
@@ -662,6 +676,35 @@ fun AdhkarDetailScreen(category: AdhkarCategory, onBack: () -> Unit, prefs: Pref
                         if (currentItem.virtue.isNotBlank()) {
                             Spacer(modifier = Modifier.height(20.dp))
                             FadailCard(virtue = currentItem.virtue, reference = currentItem.reference)
+                        }
+
+                        // ═══ NEW CYCLE BUTTON — shown when ALL items are done ═══
+                        val allDone = category.items.all { it.target > 0 && it.count >= it.target }
+                        if (allDone) {
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Box(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(24.dp))
+                                    .background(PremiumTheme.AccentGold.copy(alpha = 0.15f))
+                                    .border(1.dp, PremiumTheme.AccentGold.copy(alpha = 0.6f), RoundedCornerShape(24.dp))
+                                    .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
+                                        category.items.forEachIndexed { idx, item ->
+                                            category.items[idx] = item.copy(count = 0)
+                                            prefs.saveAdhkarCount(category.id, item.id, 0)
+                                        }
+                                        coroutineScope.launch { pagerState.scrollToPage(0) }
+                                    }
+                                    .padding(horizontal = 28.dp, vertical = 10.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    "🔄 بدء دورة جديدة",
+                                    color = PremiumTheme.AccentGold,
+                                    fontSize = 15.sp,
+                                    fontFamily = MeQuranFont,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
                         }
                     }
                 }
@@ -797,18 +840,18 @@ fun TasbihScreen(dhikrList: androidx.compose.runtime.snapshots.SnapshotStateList
                 if (selectedDhikr.target > 0) {
                     if (selectedDhikr.count >= selectedDhikr.target) {
                         selectedDhikr = selectedDhikr.copy(count = 1)
-                        if (isHapticEnabled) haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                        if (isHapticEnabled) vibrateDevice(context, 30L)
                     } else {
                         selectedDhikr = selectedDhikr.copy(count = selectedDhikr.count + 1)
                         if (selectedDhikr.count == selectedDhikr.target) {
-                            if (isHapticEnabled) haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                            if (isHapticEnabled) vibrateDevice(context, 60L)
                         } else {
-                            if (isHapticEnabled) haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                            if (isHapticEnabled) vibrateDevice(context, 30L)
                         }
                     }
                 } else {
                     selectedDhikr = selectedDhikr.copy(count = selectedDhikr.count + 1)
-                    if (isHapticEnabled) haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    if (isHapticEnabled) vibrateDevice(context, 30L)
                 }
                 val index = dhikrList.indexOfFirst { it.id == selectedDhikr.id }
                 if (index != -1) { 

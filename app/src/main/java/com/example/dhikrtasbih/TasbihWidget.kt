@@ -108,9 +108,10 @@ object TasbihWidget : GlanceAppWidget() {
                                 modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color(0xFFF5F5F5)),
-                                    fontSize = 16.sp,
+                                    fontSize = 13.sp,
                                     textAlign = TextAlign.Center
-                                )
+                                ),
+                                maxLines = 4
                             )
 
                             Box(

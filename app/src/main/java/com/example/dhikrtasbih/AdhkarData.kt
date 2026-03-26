@@ -79,7 +79,7 @@ object AdhkarData {
         ),
         AdhkarCategory(
             id = 3,
-            titleAr = "أذكار النوم والأحلام",
+            titleAr = "أذكار النوم",
             iconVector = Icons.Outlined.Bedtime,
             items = mutableStateListOf<DhikrItem>().apply { addAll(sleepAdhkar()) }
         ),
