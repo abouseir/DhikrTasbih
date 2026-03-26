@@ -51,35 +51,39 @@ object TasbihWidget : GlanceAppWidget() {
                 Box(
                     modifier = GlanceModifier.fillMaxSize()
                         .cornerRadius(24.dp)
-                        .background(Color(0xFF000000)) // Ghost Aesthetic — Pure Black
-                        .padding(16.dp)
-                        .clickable(actionRunCallback<IncrementAction>()),
+                        .background(Color(0xFF000000))
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
                     contentAlignment = Alignment.Center
                 ) {
-                    Box(
-                        modifier = GlanceModifier.fillMaxSize(),
-                        contentAlignment = Alignment.TopStart
-                    ) {
-                        Box(
-                            modifier = GlanceModifier.size(40.dp).clickable(actionRunCallback<ResetAction>()),
-                            contentAlignment = Alignment.TopStart
-                        ) {
-                            Text(
-                                text = "↺",
-                                style = TextStyle(
-                                    color = androidx.glance.unit.ColorProvider(Color(0xFFA1A1AA)),
-                                    fontSize = 22.sp,
-                                    fontWeight = FontWeight.Bold
-                                )
-                            )
-                        }
-                    }
-
                     Column(
+                        modifier = GlanceModifier.fillMaxSize(),
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        // Header (⟨   Title   ⟩)
+                        // ── Reset button row at the top
+                        Row(
+                            modifier = GlanceModifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.Start,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Box(
+                                modifier = GlanceModifier.size(36.dp).clickable(actionRunCallback<ResetAction>()),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = "↺",
+                                    style = TextStyle(
+                                        color = androidx.glance.unit.ColorProvider(Color(0xFF888888)),
+                                        fontSize = 20.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                )
+                            }
+                        }
+
+                        Spacer(modifier = GlanceModifier.defaultWeight())
+
+                        // ── Dhikr text with prev/next navigation
                         Row(
                             modifier = GlanceModifier.fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically,
@@ -98,17 +102,17 @@ object TasbihWidget : GlanceAppWidget() {
                                     )
                                 )
                             }
-                            
+
                             Text(
                                 text = "\u200F${selectedDhikr.textAr}\u200F",
                                 modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),
                                 style = TextStyle(
-                                    color = androidx.glance.unit.ColorProvider(Color(0xFFFAFAF9)),
-                                    fontSize = 18.sp,
+                                    color = androidx.glance.unit.ColorProvider(Color(0xFFF5F5F5)),
+                                    fontSize = 16.sp,
                                     textAlign = TextAlign.Center
                                 )
                             )
-                            
+
                             Box(
                                 modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<NextAction>()),
                                 contentAlignment = Alignment.Center
@@ -123,26 +127,28 @@ object TasbihWidget : GlanceAppWidget() {
                                 )
                             }
                         }
-                        
-                        Spacer(modifier = GlanceModifier.height(12.dp))
-                        
-                        val targetTxt = " / ∞"
+
+                        Spacer(modifier = GlanceModifier.height(10.dp))
+
+                        // ── Counter
+                        val targetTxt = if (selectedDhikr.target > 0) " / ${selectedDhikr.target}" else " / ∞"
                         Text(
                             text = "${selectedDhikr.count}$targetTxt",
                             style = TextStyle(
                                 color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)),
-                                fontSize = 42.sp,
+                                fontSize = 38.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         )
-                        
-                        Spacer(modifier = GlanceModifier.height(16.dp))
-                        
+
+                        Spacer(modifier = GlanceModifier.defaultWeight())
+
+                        // ── Increment button at the bottom
                         Box(
                             modifier = GlanceModifier
                                 .background(Color(0xFFD4AF37))
                                 .cornerRadius(16.dp)
-                                .padding(horizontal = 24.dp, vertical = 12.dp)
+                                .padding(horizontal = 32.dp, vertical = 10.dp)
                                 .clickable(actionRunCallback<IncrementAction>()),
                             contentAlignment = Alignment.Center
                         ) {
@@ -150,11 +156,13 @@ object TasbihWidget : GlanceAppWidget() {
                                 text = "سَبِّحْ",
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color.Black),
-                                    fontSize = 18.sp,
+                                    fontSize = 17.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                             )
                         }
+
+                        Spacer(modifier = GlanceModifier.height(4.dp))
                     }
                 }
             }
