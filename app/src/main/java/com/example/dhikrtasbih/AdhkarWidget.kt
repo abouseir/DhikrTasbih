@@ -182,9 +182,10 @@ object AdhkarWidget : GlanceAppWidget() {
                         // ── Increment button (or Reset-cycle when done)
                         Box(
                             modifier = GlanceModifier
+                                .fillMaxWidth()
                                 .background(if (isDone) Color(0xFF1A1A1A) else Color(0xFFD4AF37))
-                                .cornerRadius(10.dp)
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
+                                .cornerRadius(16.dp)
+                                .padding(vertical = 16.dp)
                                 .clickable(
                                     if (isDone) actionRunCallback<AdhkarResetCycleAction>()
                                     else actionRunCallback<AdhkarIncrementAction>()
@@ -197,7 +198,7 @@ object AdhkarWidget : GlanceAppWidget() {
                                     color = androidx.glance.unit.ColorProvider(
                                         if (isDone) Color(0xFFD4AF37) else Color.Black
                                     ),
-                                    fontSize = 12.sp, fontWeight = FontWeight.Bold
+                                    fontSize = 16.sp, fontWeight = FontWeight.Bold
                                 )
                             )
                         }

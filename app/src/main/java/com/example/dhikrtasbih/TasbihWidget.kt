@@ -148,9 +148,10 @@ object TasbihWidget : GlanceAppWidget() {
                         // ── Increment button at the bottom
                         Box(
                             modifier = GlanceModifier
+                                .fillMaxWidth()
                                 .background(Color(0xFFD4AF37))
-                                .cornerRadius(10.dp)
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
+                                .cornerRadius(16.dp)
+                                .padding(vertical = 16.dp)
                                 .clickable(actionRunCallback<IncrementAction>()),
                             contentAlignment = Alignment.Center
                         ) {
@@ -158,7 +159,7 @@ object TasbihWidget : GlanceAppWidget() {
                                 text = "سَبِّحْ",
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color.Black),
-                                    fontSize = 12.sp,
+                                    fontSize = 18.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                             )
