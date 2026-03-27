@@ -132,14 +132,15 @@ object AdhkarWidget : GlanceAppWidget() {
                                 ))
                             }
 
+                            val fixedText = item.textAr.map { if (it == '﴿') '﴾' else if (it == '﴾') '﴿' else it }.joinToString("")
                             Text(
-                                text = "\u200F${item.textAr}\u200F",
+                                text = "\u200F$fixedText\u200F",
                                 modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(
                                         if (isDone) Color(0xFF4CAF50) else Color(0xFFF5F5F5)
                                     ),
-                                    fontSize = 16.sp,
+                                    fontSize = 22.sp,
                                     textAlign = TextAlign.Center
                                 )
                             )
@@ -240,8 +241,9 @@ class AdhkarIncrementAction : ActionCallback {
             val cat     = AdhkarData.categories().find { it.id == catId } ?: return@updateAppWidgetState
             val item    = cat.items.getOrNull(itemIdx) ?: return@updateAppWidgetState
 
-            if (item.count < item.target) {
-                val newCount = item.count + 1
+            val currentCount = prefs.getAdhkarCount(catId, item.id)
+            if (currentCount < item.target) {
+                val newCount = currentCount + 1
                 prefs.saveAdhkarCount(catId, item.id, newCount)
                 // Auto-advance when target reached
                 if (newCount >= item.target && itemIdx < cat.items.size - 1) {

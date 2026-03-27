@@ -103,12 +103,13 @@ object TasbihWidget : GlanceAppWidget() {
                                 )
                             }
 
+                            val fixedText = selectedDhikr.textAr.map { if (it == '﴿') '﴾' else if (it == '﴾') '﴿' else it }.joinToString("")
                             Text(
-                                text = "\u200F${selectedDhikr.textAr}\u200F",
+                                text = "\u200F$fixedText\u200F",
                                 modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(Color(0xFFF5F5F5)),
-                                    fontSize = 16.sp,
+                                    fontSize = 22.sp,
                                     textAlign = TextAlign.Center
                                 )
 

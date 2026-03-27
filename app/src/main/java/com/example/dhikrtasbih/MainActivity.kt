@@ -143,6 +143,8 @@ fun RtlLinearProgressBar(
 
 private fun formatArabicDisplayText(text: String): String {
     val normalized = text.replace("...", "…")
+        .map { if (it == '﴿') '﴾' else if (it == '﴾') '﴿' else it }
+        .joinToString("")
     return BidiFormatter.getInstance(true)
         .unicodeWrap(normalized, TextDirectionHeuristicsCompat.RTL)
 }
