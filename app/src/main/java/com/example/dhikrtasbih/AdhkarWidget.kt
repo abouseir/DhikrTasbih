@@ -112,39 +112,23 @@ object AdhkarWidget : GlanceAppWidget() {
                             )
                         }
 
-                        Spacer(GlanceModifier.defaultWeight())
-
-                        // ── Item Navigation row
-                        Row(
-                            modifier = GlanceModifier.fillMaxWidth(),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalAlignment = Alignment.CenterHorizontally
+                        // ── Main Text Content
+                        Box(
+                            modifier = GlanceModifier.fillMaxWidth().defaultWeight(),
+                            contentAlignment = Alignment.Center
                         ) {
-                            Box(
-                                modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<AdhkarPrevItemAction>()),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text("⟨", style = TextStyle(
-                                    color = androidx.glance.unit.ColorProvider(
-                                        if (isDone) Color(0xFF444444) else Color(0xFFD4AF37)
-                                    ),
-                                    fontSize = 24.sp, fontWeight = FontWeight.Bold
-                                ))
-                            }
-
                             val textLength = item.textAr.length
                             val dynamicFontSize = when {
-                                textLength > 400 -> 14.sp
-                                textLength > 250 -> 16.sp
-                                textLength > 150 -> 18.sp
-                                textLength > 60 -> 24.sp
-                                else -> 30.sp
+                                textLength > 400 -> 16.sp
+                                textLength > 250 -> 18.sp
+                                textLength > 150 -> 21.sp
+                                textLength > 60 -> 25.sp
+                                else -> 32.sp
                             }
 
-                            val fixedText = item.textAr
                             Text(
-                                text = "\u200F$fixedText\u200F",
-                                modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),
+                                text = "\u200F${item.textAr}\u200F",
+                                modifier = GlanceModifier.padding(horizontal = 12.dp),
                                 style = TextStyle(
                                     color = androidx.glance.unit.ColorProvider(
                                         if (isDone) Color(0xFF4CAF50) else Color(0xFFF5F5F5)
@@ -153,73 +137,72 @@ object AdhkarWidget : GlanceAppWidget() {
                                     textAlign = TextAlign.Center
                                 )
                             )
-
-                            Box(
-                                modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<AdhkarNextItemAction>()),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text("⟩", style = TextStyle(
-                                    color = androidx.glance.unit.ColorProvider(
-                                        if (isDone) Color(0xFF444444) else Color(0xFFD4AF37)
-                                    ),
-                                    fontSize = 24.sp, fontWeight = FontWeight.Bold
-                                ))
-                            }
                         }
 
-                        // ── Bottom clickable area (combines Counter + Button)
-                        Box(
-                            modifier = GlanceModifier
-                                .fillMaxWidth()
-                                .defaultWeight()
-                                .padding(top = 12.dp, bottom = 2.dp)
-                                .clickable(
-                                    if (isDone) actionRunCallback<AdhkarResetCycleAction>()
-                                    else actionRunCallback<AdhkarIncrementAction>()
-                                ),
-                            contentAlignment = Alignment.BottomCenter
+                        // ── Bottom area
+                        Column(
+                            modifier = GlanceModifier.fillMaxWidth().padding(top = 12.dp, bottom = 2.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally
+                            
+                            // Navigation & Counter
+                            Row(
+                                modifier = GlanceModifier.fillMaxWidth().padding(horizontal = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                // ── Counter: x/target or ✓ Done
-                                if (isDone) {
-                                    Text("✓ تم", style = TextStyle(
-                                        color = androidx.glance.unit.ColorProvider(Color(0xFF4CAF50)),
-                                        fontSize = 18.sp, fontWeight = FontWeight.Bold
-                                    ))
-                                } else {
-                                    val targetStr = if (item.target > 0) " / ${item.target}" else ""
-                                    Text(
-                                        "${item.count}$targetStr",
-                                        style = TextStyle(
-                                            color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)),
-                                            fontSize = 22.sp, fontWeight = FontWeight.Bold
-                                        )
-                                    )
-                                }
-
-                                Spacer(GlanceModifier.height(12.dp))
-
-                                // ── Increment button (or Reset-cycle when done)
+                                // Previous
                                 Box(
-                                    modifier = GlanceModifier
-                                        .fillMaxWidth()
-                                        .background(if (isDone) Color(0xFF1A1A1A) else Color(0xFFD4AF37))
-                                        .cornerRadius(16.dp)
-                                        .padding(vertical = 16.dp),
+                                    modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<AdhkarPrevItemAction>()),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text(
-                                        text = if (isDone) "🔄 دورة جديدة" else "اذكر",
-                                        style = TextStyle(
-                                            color = androidx.glance.unit.ColorProvider(
-                                                if (isDone) Color(0xFFD4AF37) else Color.Black
-                                            ),
-                                            fontSize = 16.sp, fontWeight = FontWeight.Bold
-                                        )
-                                    )
+                                    Text("⟨", style = TextStyle(color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)), fontSize = 32.sp, fontWeight = FontWeight.Bold))
                                 }
+
+                                // Counter
+                                Box(
+                                    modifier = GlanceModifier.defaultWeight(),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    if (isDone) {
+                                        Text("✓ تم", style = TextStyle(color = androidx.glance.unit.ColorProvider(Color(0xFF4CAF50)), fontSize = 20.sp, fontWeight = FontWeight.Bold))
+                                    } else {
+                                        val targetStr = if (item.target > 0) " / ${item.target}" else ""
+                                        Text(
+                                            "${item.count}$targetStr",
+                                            style = TextStyle(color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)), fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                                        )
+                                    }
+                                }
+
+                                // Next
+                                Box(
+                                    modifier = GlanceModifier.size(48.dp).clickable(actionRunCallback<AdhkarNextItemAction>()),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text("⟩", style = TextStyle(color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)), fontSize = 32.sp, fontWeight = FontWeight.Bold))
+                                }
+                            }
+
+                            Spacer(GlanceModifier.height(16.dp))
+
+                            // Increment Button
+                            val buttonText = if (isDone) "🔄 دورة جديدة" else "اذكر"
+                            Box(
+                                modifier = GlanceModifier
+                                    .fillMaxWidth()
+                                    .background(if (isDone) Color(0xFF1A1A1A) else Color(0xFFD4AF37))
+                                    .cornerRadius(24.dp)
+                                    .clickable(if (isDone) actionRunCallback<AdhkarResetCycleAction>() else actionRunCallback<AdhkarIncrementAction>())
+                                    .padding(vertical = 20.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = buttonText,
+                                    style = TextStyle(
+                                        color = androidx.glance.unit.ColorProvider(if (isDone) Color(0xFFD4AF37) else Color.Black),
+                                        fontSize = 20.sp, fontWeight = FontWeight.Bold
+                                    )
+                                )
                             }
                         }
                     }

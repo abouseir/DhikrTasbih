@@ -163,9 +163,10 @@ fun CounterScreen(categoryId: Int) {
         ) {
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Position indicator
+            // Position and Count indicator
+            val targetStr = if (currentItem.target > 0) "/${currentItem.target}" else "/∞"
             Text(
-                text = "${itemIndex + 1} / ${items.size}",
+                text = "${itemIndex + 1}/${items.size}  •  $count$targetStr",
                 color = Color(0xFF888888),
                 fontSize = 11.sp,
                 textAlign = TextAlign.Center,
@@ -233,46 +234,28 @@ fun CounterScreen(categoryId: Int) {
                     fontWeight = FontWeight.Bold
                 )
             }
-
-            val targetStr = if (currentItem.target > 0) " / ${currentItem.target}" else " / ∞"
-            Text(
-                text = "$count$targetStr",
-                color = Color(0xFFD4AF37),
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold
-            )
-            Spacer(modifier = Modifier.height(6.dp))
-
-            val isDone = currentItem.target > 0 && count >= currentItem.target
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(65.dp)
-                    .background(if (isDone) Color(0xFF10B981) else Color(0xFFD4AF37))
-                    .clickable {
-                        if (currentItem.target == 0 || count < currentItem.target) {
-                            count++
-                            prefs.edit().putInt("count_${categoryId}_${currentItem.id}", count).apply()
-                            vibrateWearDevice(context, 30L)
-                            if (count == currentItem.target && itemIndex < items.size - 1) {
-                                itemIndex++
-                                prefs.edit().putInt("index_$categoryId", itemIndex).apply()
-                            }
-                        } else {
-                            vibrateWearDevice(context, 100L)
-                        }
-                    },
-                contentAlignment = Alignment.TopCenter
-            ) {
-                Text(
-                    text = if (isDone) "✓ تم" else "سَبِّحْ",
-                    color = if (isDone) Color.White else Color.Black,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(top = 10.dp)
-                )
-            }
+            Spacer(modifier = Modifier.height(24.dp))
         }
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.45f)
+                .align(Alignment.BottomCenter)
+                .clickable {
+                    if (currentItem.target == 0 || count < currentItem.target) {
+                        count++
+                        prefs.edit().putInt("count_${categoryId}_${currentItem.id}", count).apply()
+                        vibrateWearDevice(context, 30L)
+                        if (count == currentItem.target && itemIndex < items.size - 1) {
+                            itemIndex++
+                            prefs.edit().putInt("index_$categoryId", itemIndex).apply()
+                        }
+                    } else {
+                        vibrateWearDevice(context, 100L)
+                    }
+                }
+        )
     }
     LaunchedEffect(categoryId, itemIndex) { focusRequester.requestFocus() }
 }
