@@ -81,9 +81,18 @@ fun WearApp() {
 fun MenuScreen(onCategorySelected: (Int) -> Unit) {
     val categories = AdhkarData.categories()
     
+    val state = androidx.wear.compose.foundation.lazy.rememberScalingLazyListState()
+    val coroutineScope = rememberCoroutineScope()
     val focusRequester = remember { FocusRequester() }
     ScalingLazyColumn(
+        state = state,
         modifier = Modifier.fillMaxSize().background(Color.Black)
+            .onRotaryScrollEvent { event ->
+                coroutineScope.launch {
+                    state.scrollBy(event.verticalScrollPixels)
+                }
+                true
+            }
             .focusRequester(focusRequester)
             .focusable(),
         horizontalAlignment = Alignment.CenterHorizontally
