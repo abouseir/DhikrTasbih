@@ -49,6 +49,8 @@ dependencies {
     implementation("com.google.android.horologist:horologist-compose-layout:0.5.21")
     implementation("com.google.android.horologist:horologist-compose-material:0.5.21")
     implementation("androidx.glance:glance-wear-tiles:1.0.0-alpha05")
+    implementation("androidx.wear.compose:compose-navigation:1.3.0")
+    implementation("androidx.compose.material:material-icons-extended")
     
     // Shared Data (Assuming standard Datastore)
     implementation(libs.androidx.datastore.preferences)

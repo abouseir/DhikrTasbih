@@ -9,31 +9,32 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.wear.compose.material.Text
-import androidx.wear.compose.material.MaterialTheme
+import androidx.wear.compose.material.*
+import androidx.wear.compose.navigation.SwipeDismissableNavHost
+import androidx.wear.compose.navigation.composable
+import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
+import androidx.wear.compose.foundation.lazy.items
 
-data class Dhikr(val id: Int, val textAr: String, val target: Int)
+data class DhikrItem(val id: Int, val textAr: String, val target: Int, val desc: String = "", val trans: String = "", val virtue: String = "", val reference: String = "")
+data class AdhkarCategory(val id: Int, val titleAr: String, val titleEn: String? = null, val iconVector: ImageVector? = null, val iconRes: Int? = null, val items: List<DhikrItem>)
 
-val defaultDhikrs = listOf(
-    Dhikr(1, "سُبْحَانَ اللَّهِ", 33),
-    Dhikr(2, "الْحَمْدُ لِلَّهِ", 33),
-    Dhikr(3, "اللَّهُ أَكْبَرُ", 33),
-    Dhikr(4, "لَا إِلَهَ إِلَّا اللَّهُ", 33),
-    Dhikr(5, "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ", 0)
-)
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,122 +45,190 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+val tasbihItems = listOf(
+    DhikrItem(1001, "سُبْحَانَ اللَّهِ", 33, "", "", "", ""),
+    DhikrItem(1002, "الْحَمْدُ لِلَّهِ", 33, "", "", "", ""),
+    DhikrItem(1003, "اللَّهُ أَكْبَرُ", 33, "", "", "", ""),
+    DhikrItem(1004, "لَا إِلَهَ إِلَّا اللَّهُ", 33, "", "", "", ""),
+    DhikrItem(1005, "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ", 0, "", "", "", ""),
+    DhikrItem(1006, "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ", 100, "", "", "", ""),
+    DhikrItem(1007, "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", 100, "", "", "", ""),
+    DhikrItem(1008, "سُبْحَانَ اللَّهِ الْعَظِيمِ", 0, "", "", "", "")
+)
+
 @Composable
 fun WearApp() {
+    MaterialTheme {
+        val navController = rememberSwipeDismissableNavController()
+        SwipeDismissableNavHost(
+            navController = navController,
+            startDestination = "menu"
+        ) {
+            composable("menu") {
+                MenuScreen { categoryId ->
+                    navController.navigate("counter/$categoryId")
+                }
+            }
+            composable("counter/{categoryId}") { backStackEntry ->
+                val catIdStr = backStackEntry.arguments?.getString("categoryId") ?: "0"
+                val catId = catIdStr.toIntOrNull() ?: 0
+                CounterScreen(catId)
+            }
+        }
+    }
+}
+
+@Composable
+fun MenuScreen(onCategorySelected: (Int) -> Unit) {
+    val categories = AdhkarData.categories()
+    
+    ScalingLazyColumn(
+        modifier = Modifier.fillMaxSize().background(Color.Black),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        item { Spacer(Modifier.height(24.dp)) }
+        item {
+            Button(
+                onClick = { onCategorySelected(0) },
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFD4AF37)),
+                modifier = Modifier.fillMaxWidth(0.9f).padding(vertical = 4.dp).height(48.dp)
+            ) {
+                Text("📿 التسبيح", color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            }
+        }
+        items(categories) { category ->
+            Button(
+                onClick = { onCategorySelected(category.id) },
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF1A1A1A)),
+                modifier = Modifier.fillMaxWidth(0.9f).padding(vertical = 4.dp).height(48.dp)
+            ) {
+                Text(category.titleAr, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            }
+        }
+        item { Spacer(Modifier.height(32.dp)) }
+    }
+}
+
+@Composable
+fun CounterScreen(categoryId: Int) {
     val context = LocalContext.current
     val prefs = context.getSharedPreferences("wear_tasbih_prefs", Context.MODE_PRIVATE)
     
-    var dhikrIndex by remember { mutableStateOf(prefs.getInt("dhikr_index", 0)) }
-    val currentDhikr = defaultDhikrs[dhikrIndex]
-    
-    var count by remember { mutableStateOf(prefs.getInt("count_${currentDhikr.id}", 0)) }
+    val items = remember(categoryId) {
+        if (categoryId == 0) tasbihItems
+        else AdhkarData.categories().find { it.id == categoryId }?.items ?: emptyList()
+    }
+    if (items.isEmpty()) return
 
-    // Update count when index changes
-    LaunchedEffect(dhikrIndex) {
-        count = prefs.getInt("count_${defaultDhikrs[dhikrIndex].id}", 0)
+    var itemIndex by remember { mutableStateOf(prefs.getInt("index_$categoryId", 0).coerceIn(0, items.lastIndex)) }
+    val currentItem = items[itemIndex]
+    
+    var count by remember { mutableStateOf(prefs.getInt("count_${categoryId}_${currentItem.id}", 0)) }
+
+    LaunchedEffect(itemIndex) {
+        count = prefs.getInt("count_${categoryId}_${items[itemIndex].id}", 0)
     }
 
-    MaterialTheme {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black),
-            contentAlignment = Alignment.Center
+    Box(
+        modifier = Modifier.fillMaxSize().background(Color.Black),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top
         ) {
-            Column(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+            Spacer(modifier = Modifier.height(24.dp))
+            
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                // Top Navigation Row
-                Row(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "⟨",
-                        color = Color(0xFFD4AF37),
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.clickable {
-                            dhikrIndex = if (dhikrIndex - 1 < 0) defaultDhikrs.size - 1 else dhikrIndex - 1
-                            prefs.edit().putInt("dhikr_index", dhikrIndex).apply()
-                            vibrateWearDevice(context, 20L)
-                        }.padding(8.dp)
-                    )
-                    
-                    Text(
-                        text = "🔄",
-                        fontSize = 16.sp,
-                        modifier = Modifier.clickable {
-                            count = 0
-                            prefs.edit().putInt("count_${currentDhikr.id}", 0).apply()
-                            vibrateWearDevice(context, 40L)
-                        }.padding(8.dp)
-                    )
-
-                    Text(
-                        text = "⟩",
-                        color = Color(0xFFD4AF37),
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.clickable {
-                            dhikrIndex = (dhikrIndex + 1) % defaultDhikrs.size
-                            prefs.edit().putInt("dhikr_index", dhikrIndex).apply()
-                            vibrateWearDevice(context, 20L)
-                        }.padding(8.dp)
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(4.dp))
-
-                // Dhikr Text
-                Text(
-                    text = "\u200F${currentDhikr.textAr}\u200F",
-                    color = Color.White,
-                    fontSize = 18.sp,
-                    textAlign = TextAlign.Center,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.fillMaxWidth()
+                Icon(
+                    imageVector = Icons.Default.KeyboardArrowRight,
+                    contentDescription = "Previous",
+                    tint = Color(0xFFD4AF37),
+                    modifier = Modifier.size(28.dp).clickable {
+                        itemIndex = if (itemIndex - 1 < 0) items.size - 1 else itemIndex - 1
+                        prefs.edit().putInt("index_$categoryId", itemIndex).apply()
+                        vibrateWearDevice(context, 20L)
+                    }.padding(4.dp)
+                )
+                
+                Icon(
+                    imageVector = Icons.Default.Refresh,
+                    contentDescription = "Reset",
+                    tint = Color(0xFF888888),
+                    modifier = Modifier.size(24.dp).clickable {
+                        count = 0
+                        prefs.edit().putInt("count_${categoryId}_${currentItem.id}", 0).apply()
+                        vibrateWearDevice(context, 40L)
+                    }.padding(2.dp)
                 )
 
-                Spacer(modifier = Modifier.height(6.dp))
-
-                // Counter and Target
-                val targetStr = if (currentDhikr.target > 0) " / ${currentDhikr.target}" else " / ∞"
-                Text(
-                    text = "$count$targetStr",
-                    color = Color(0xFFD4AF37),
-                    style = MaterialTheme.typography.display3.copy(fontWeight = FontWeight.Bold)
+                Icon(
+                    imageVector = Icons.Default.KeyboardArrowLeft,
+                    contentDescription = "Next",
+                    tint = Color(0xFFD4AF37),
+                    modifier = Modifier.size(28.dp).clickable {
+                        itemIndex = (itemIndex + 1) % items.size
+                        prefs.edit().putInt("index_$categoryId", itemIndex).apply()
+                        vibrateWearDevice(context, 20L)
+                    }.padding(4.dp)
                 )
+            }
 
-                Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.weight(1f))
 
-                // Large Increment Area
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(48.dp)
-                        .background(Color(0xFFD4AF37), RoundedCornerShape(24.dp))
-                        .clickable {
-                            if (currentDhikr.target == 0 || count < currentDhikr.target) {
-                                count++
-                                prefs.edit().putInt("count_${currentDhikr.id}", count).apply()
-                                vibrateWearDevice(context, 30L)
-                            } else {
-                                vibrateWearDevice(context, 100L) // Long vibrate if max reached
+            Text(
+                text = "\u200F${currentItem.textAr}\u200F",
+                color = Color.White,
+                fontSize = 18.sp,
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp)
+            )
+
+            Spacer(modifier = Modifier.height(6.dp))
+
+            val targetStr = if (currentItem.target > 0) " / ${currentItem.target}" else " / ∞"
+            Text(
+                text = "$count$targetStr",
+                color = Color(0xFFD4AF37),
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold
+            )
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(65.dp)
+                    .background(Color(0xFFD4AF37))
+                    .clickable {
+                        if (currentItem.target == 0 || count < currentItem.target) {
+                            count++
+                            prefs.edit().putInt("count_${categoryId}_${currentItem.id}", count).apply()
+                            vibrateWearDevice(context, 30L)
+                            if (count == currentItem.target && itemIndex < items.size - 1) {
+                                itemIndex++
+                                prefs.edit().putInt("index_$categoryId", itemIndex).apply()
                             }
-                        },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "سَبِّحْ",
-                        color = Color.Black,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                }
+                        } else {
+                            vibrateWearDevice(context, 100L)
+                        }
+                    },
+                contentAlignment = Alignment.TopCenter
+            ) {
+                Text(
+                    text = "سَبِّحْ",
+                    color = Color.Black,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(top = 10.dp)
+                )
             }
         }
     }

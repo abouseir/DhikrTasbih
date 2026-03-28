@@ -34,8 +34,8 @@ class TasbihTileService : GlanceTileService() {
         val dhikrIndex = prefs.getInt("dhikr_index", 0)
         
         // Failsafe in case index is out of bounds
-        val safeIndex = if (dhikrIndex in defaultDhikrs.indices) dhikrIndex else 0
-        val currentDhikr = defaultDhikrs[safeIndex]
+        val safeIndex = if (dhikrIndex in tasbihItems.indices) dhikrIndex else 0
+        val currentDhikr = tasbihItems[safeIndex]
         val count = prefs.getInt("count_${currentDhikr.id}", 0)
         val targetTxt = if (currentDhikr.target > 0) " / ${currentDhikr.target}" else " / ∞"
 

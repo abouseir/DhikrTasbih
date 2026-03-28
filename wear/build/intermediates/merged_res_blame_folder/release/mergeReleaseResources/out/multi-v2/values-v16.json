@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.dhikrtasbih.wear-mergeReleaseResources-77:/values-v16/values-v16.xml",
+            "outputFile": "com.example.dhikrtasbih.wear-mergeReleaseResources-78:/values-v16/values-v16.xml",
             "map": [
                 {
                     "source": "/home/ayoub/.gradle/caches/8.13/transforms/79456f1384f1695c39358bc013a4262e/transformed/appcompat-1.2.0/res/values-v16/values-v16.xml",

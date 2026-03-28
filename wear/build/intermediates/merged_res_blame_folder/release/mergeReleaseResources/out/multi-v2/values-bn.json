@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.dhikrtasbih.wear-mergeReleaseResources-77:/values-bn/values-bn.xml",
+            "outputFile": "com.example.dhikrtasbih.wear-mergeReleaseResources-78:/values-bn/values-bn.xml",
             "map": [
                 {
                     "source": "/home/ayoub/.gradle/caches/8.13/transforms/bf076b132b3f289da557a70993dec08a/transformed/ui-release/res/values-bn/values-bn.xml",
