@@ -213,25 +213,26 @@ fun CounterScreen(categoryId: Int) {
                 )
             }
 
-            Spacer(modifier = Modifier.weight(1f))
-
             val textLength = currentItem.textAr.length
             val dynamicFontSize = if (textLength > 300) 13.sp else if (textLength > 150) 15.sp else if (textLength > 50) 16.sp else 18.sp
 
-            Text(
-                text = "\u200F${currentItem.textAr}\u200F",
-                color = Color.White,
-                fontSize = dynamicFontSize,
-                textAlign = TextAlign.Center,
-                fontWeight = FontWeight.Bold,
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f, fill = false)
+                    .weight(1f)
                     .verticalScroll(scrollState)
-                    .padding(horizontal = 12.dp)
-            )
-
-            Spacer(modifier = Modifier.height(6.dp))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "\u200F${currentItem.textAr}\u200F",
+                    color = Color.White,
+                    fontSize = dynamicFontSize,
+                    textAlign = TextAlign.Center,
+                    fontWeight = FontWeight.Bold
+                )
+            }
 
             val targetStr = if (currentItem.target > 0) " / ${currentItem.target}" else " / ∞"
             Text(
@@ -240,8 +241,7 @@ fun CounterScreen(categoryId: Int) {
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold
             )
-
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.height(6.dp))
 
             val isDone = currentItem.target > 0 && count >= currentItem.target
             Box(
@@ -274,7 +274,7 @@ fun CounterScreen(categoryId: Int) {
             }
         }
     }
-    LaunchedEffect(Unit) { focusRequester.requestFocus() }
+    LaunchedEffect(categoryId, itemIndex) { focusRequester.requestFocus() }
 }
 
 fun vibrateWearDevice(context: Context, durationMs: Long = 30L) {

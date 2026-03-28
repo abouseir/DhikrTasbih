@@ -143,8 +143,6 @@ fun RtlLinearProgressBar(
 
 private fun formatArabicDisplayText(text: String): String {
     val normalized = text.replace("...", "…")
-        .map { if (it == '﴿') '﴾' else if (it == '﴾') '﴿' else it }
-        .joinToString("")
     return BidiFormatter.getInstance(true)
         .unicodeWrap(normalized, TextDirectionHeuristicsCompat.RTL)
 }
@@ -585,8 +583,20 @@ fun AdhkarDetailScreen(category: AdhkarCategory, onBack: () -> Unit, prefs: Pref
             val progress = if (currentItem.target > 0) (currentItem.count.toFloat() / currentItem.target.toFloat()).coerceIn(0f, 1f) else 0f
 
             val textLength = currentItem.textAr.length
-            val dynamicFontSize = if (textLength > 150) 26.sp else if (textLength > 50) 31.sp else 42.sp
-            val dynamicLineHeight = if (textLength > 150) 52.sp else if (textLength > 50) 58.sp else 74.sp
+            val dynamicFontSize = when {
+                textLength > 400 -> 24.sp
+                textLength > 250 -> 28.sp
+                textLength > 150 -> 32.sp
+                textLength > 80 -> 38.sp
+                else -> 48.sp
+            }
+            val dynamicLineHeight = when {
+                textLength > 400 -> 46.sp
+                textLength > 250 -> 52.sp
+                textLength > 150 -> 58.sp
+                textLength > 80 -> 68.sp
+                else -> 84.sp
+            }
 
             Box(
                 modifier = Modifier

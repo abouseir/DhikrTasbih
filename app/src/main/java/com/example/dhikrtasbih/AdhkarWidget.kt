@@ -133,9 +133,15 @@ object AdhkarWidget : GlanceAppWidget() {
                             }
 
                             val textLength = item.textAr.length
-                            val dynamicFontSize = if (textLength > 300) 12.sp else if (textLength > 150) 14.sp else if (textLength > 60) 18.sp else 22.sp
+                            val dynamicFontSize = when {
+                                textLength > 400 -> 14.sp
+                                textLength > 250 -> 16.sp
+                                textLength > 150 -> 18.sp
+                                textLength > 60 -> 24.sp
+                                else -> 30.sp
+                            }
 
-                            val fixedText = item.textAr.map { if (it == '﴿') '﴾' else if (it == '﴾') '﴿' else it }.joinToString("")
+                            val fixedText = item.textAr
                             Text(
                                 text = "\u200F$fixedText\u200F",
                                 modifier = GlanceModifier.defaultWeight().padding(horizontal = 4.dp),

@@ -50,15 +50,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name="com.example.dhikrtasbih.wear.TasbihTileService"
-            android:exported="true"
-            android:permission="com.google.android.wearable.permission.BIND_TILE_PROVIDER" >
-            <intent-filter>
-                <action android:name="androidx.wear.tiles.action.BIND_TILE_PROVIDER" />
-            </intent-filter>
-        </service>
-
         <uses-library
             android:name="com.google.android.wearable"
             android:required="false" />
