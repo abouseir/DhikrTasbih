@@ -10,6 +10,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.gestures.scrollBy
+import androidx.compose.foundation.focusable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.KeyboardArrowRight
@@ -17,8 +21,12 @@ import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.rotary.onRotaryScrollEvent
 import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.launch
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -45,16 +53,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-val tasbihItems = listOf(
-    DhikrItem(1001, "سُبْحَانَ اللَّهِ", 33, "", "", "", ""),
-    DhikrItem(1002, "الْحَمْدُ لِلَّهِ", 33, "", "", "", ""),
-    DhikrItem(1003, "اللَّهُ أَكْبَرُ", 33, "", "", "", ""),
-    DhikrItem(1004, "لَا إِلَهَ إِلَّا اللَّهُ", 33, "", "", "", ""),
-    DhikrItem(1005, "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ", 0, "", "", "", ""),
-    DhikrItem(1006, "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ", 100, "", "", "", ""),
-    DhikrItem(1007, "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", 100, "", "", "", ""),
-    DhikrItem(1008, "سُبْحَانَ اللَّهِ الْعَظِيمِ", 0, "", "", "", "")
-)
+val tasbihItems = AdhkarData.tasbihItems()
 
 @Composable
 fun WearApp() {
@@ -82,8 +81,11 @@ fun WearApp() {
 fun MenuScreen(onCategorySelected: (Int) -> Unit) {
     val categories = AdhkarData.categories()
     
+    val focusRequester = remember { FocusRequester() }
     ScalingLazyColumn(
-        modifier = Modifier.fillMaxSize().background(Color.Black),
+        modifier = Modifier.fillMaxSize().background(Color.Black)
+            .focusRequester(focusRequester)
+            .focusable(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         item { Spacer(Modifier.height(24.dp)) }
@@ -102,11 +104,18 @@ fun MenuScreen(onCategorySelected: (Int) -> Unit) {
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF1A1A1A)),
                 modifier = Modifier.fillMaxWidth(0.9f).padding(vertical = 4.dp).height(48.dp)
             ) {
-                Text(category.titleAr, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(category.titleAr, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    if (category.iconVector != null) {
+                        Spacer(Modifier.width(6.dp))
+                        Icon(category.iconVector, contentDescription = null, tint = Color(0xFFD4AF37), modifier = Modifier.size(18.dp))
+                    }
+                }
             }
         }
         item { Spacer(Modifier.height(32.dp)) }
     }
+    LaunchedEffect(Unit) { focusRequester.requestFocus() }
 }
 
 @Composable
@@ -129,8 +138,22 @@ fun CounterScreen(categoryId: Int) {
         count = prefs.getInt("count_${categoryId}_${items[itemIndex].id}", 0)
     }
 
+    val scrollState = rememberScrollState()
+    val focusRequester = remember { FocusRequester() }
+    val coroutineScope = rememberCoroutineScope()
+
     Box(
-        modifier = Modifier.fillMaxSize().background(Color.Black),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Black)
+            .onRotaryScrollEvent { event ->
+                coroutineScope.launch {
+                    scrollState.scrollBy(event.verticalScrollPixels)
+                }
+                true
+            }
+            .focusRequester(focusRequester)
+            .focusable(),
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -138,7 +161,18 @@ fun CounterScreen(categoryId: Int) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Position indicator
+            Text(
+                text = "${itemIndex + 1} / ${items.size}",
+                color = Color(0xFF888888),
+                fontSize = 11.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Spacer(modifier = Modifier.height(4.dp))
             
             Row(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp),
@@ -181,13 +215,20 @@ fun CounterScreen(categoryId: Int) {
 
             Spacer(modifier = Modifier.weight(1f))
 
+            val textLength = currentItem.textAr.length
+            val dynamicFontSize = if (textLength > 300) 13.sp else if (textLength > 150) 15.sp else if (textLength > 50) 16.sp else 18.sp
+
             Text(
                 text = "\u200F${currentItem.textAr}\u200F",
                 color = Color.White,
-                fontSize = 18.sp,
+                fontSize = dynamicFontSize,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f, fill = false)
+                    .verticalScroll(scrollState)
+                    .padding(horizontal = 12.dp)
             )
 
             Spacer(modifier = Modifier.height(6.dp))
@@ -202,11 +243,12 @@ fun CounterScreen(categoryId: Int) {
 
             Spacer(modifier = Modifier.weight(1f))
 
+            val isDone = currentItem.target > 0 && count >= currentItem.target
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(65.dp)
-                    .background(Color(0xFFD4AF37))
+                    .background(if (isDone) Color(0xFF10B981) else Color(0xFFD4AF37))
                     .clickable {
                         if (currentItem.target == 0 || count < currentItem.target) {
                             count++
@@ -223,8 +265,8 @@ fun CounterScreen(categoryId: Int) {
                 contentAlignment = Alignment.TopCenter
             ) {
                 Text(
-                    text = "سَبِّحْ",
-                    color = Color.Black,
+                    text = if (isDone) "✓ تم" else "سَبِّحْ",
+                    color = if (isDone) Color.White else Color.Black,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(top = 10.dp)
@@ -232,6 +274,7 @@ fun CounterScreen(categoryId: Int) {
             }
         }
     }
+    LaunchedEffect(Unit) { focusRequester.requestFocus() }
 }
 
 fun vibrateWearDevice(context: Context, durationMs: Long = 30L) {

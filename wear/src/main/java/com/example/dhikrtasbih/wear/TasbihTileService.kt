@@ -31,12 +31,12 @@ class TasbihTileService : GlanceTileService() {
     override fun Content() {
         val context = LocalContext.current
         val prefs = context.getSharedPreferences("wear_tasbih_prefs", Context.MODE_PRIVATE)
-        val dhikrIndex = prefs.getInt("dhikr_index", 0)
+        val dhikrIndex = prefs.getInt("index_0", 0)
         
         // Failsafe in case index is out of bounds
         val safeIndex = if (dhikrIndex in tasbihItems.indices) dhikrIndex else 0
         val currentDhikr = tasbihItems[safeIndex]
-        val count = prefs.getInt("count_${currentDhikr.id}", 0)
+        val count = prefs.getInt("count_0_${currentDhikr.id}", 0)
         val targetTxt = if (currentDhikr.target > 0) " / ${currentDhikr.target}" else " / ∞"
 
         Box(
@@ -50,11 +50,13 @@ class TasbihTileService : GlanceTileService() {
                 modifier = GlanceModifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                val textLen = currentDhikr.textAr.length
+                val tileFontSize = if (textLen > 100) 13.sp else if (textLen > 50) 15.sp else 18.sp
                 Text(
                     text = "\u200F${currentDhikr.textAr}\u200F",
                     style = TextStyle(
                         color = ColorProvider(Color.White),
-                        fontSize = 18.sp,
+                        fontSize = tileFontSize,
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center
                     )

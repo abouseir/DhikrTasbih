@@ -132,6 +132,9 @@ object AdhkarWidget : GlanceAppWidget() {
                                 ))
                             }
 
+                            val textLength = item.textAr.length
+                            val dynamicFontSize = if (textLength > 300) 12.sp else if (textLength > 150) 14.sp else if (textLength > 60) 18.sp else 22.sp
+
                             val fixedText = item.textAr.map { if (it == '﴿') '﴾' else if (it == '﴾') '﴿' else it }.joinToString("")
                             Text(
                                 text = "\u200F$fixedText\u200F",
@@ -140,7 +143,7 @@ object AdhkarWidget : GlanceAppWidget() {
                                     color = androidx.glance.unit.ColorProvider(
                                         if (isDone) Color(0xFF4CAF50) else Color(0xFFF5F5F5)
                                     ),
-                                    fontSize = 22.sp,
+                                    fontSize = dynamicFontSize,
                                     textAlign = TextAlign.Center
                                 )
                             )
