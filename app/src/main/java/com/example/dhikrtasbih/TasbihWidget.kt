@@ -130,42 +130,51 @@ object TasbihWidget : GlanceAppWidget() {
                             }
                         }
 
-                        Spacer(modifier = GlanceModifier.defaultWeight())
-
-                        // ── Counter
-                        val targetTxt = if (selectedDhikr.target > 0) " / ${selectedDhikr.target}" else " / ∞"
-                        Text(
-                            text = "${selectedDhikr.count}$targetTxt",
-                            style = TextStyle(
-                                color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)),
-                                fontSize = 28.sp,
-                                fontWeight = FontWeight.Bold
-                            )
-                        )
-
-                        Spacer(modifier = GlanceModifier.height(12.dp))
-
-                        // ── Increment button at the bottom
+                        // ── Bottom clickable area (Counter + Button)
                         Box(
                             modifier = GlanceModifier
                                 .fillMaxWidth()
-                                .background(Color(0xFFD4AF37))
-                                .cornerRadius(16.dp)
-                                .padding(vertical = 16.dp)
+                                .defaultWeight()
+                                .padding(top = 12.dp, bottom = 2.dp)
                                 .clickable(actionRunCallback<IncrementAction>()),
-                            contentAlignment = Alignment.Center
+                            contentAlignment = Alignment.BottomCenter
                         ) {
-                            Text(
-                                text = "سَبِّحْ",
-                                style = TextStyle(
-                                    color = androidx.glance.unit.ColorProvider(Color.Black),
-                                    fontSize = 18.sp,
-                                    fontWeight = FontWeight.Bold
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                // ── Counter
+                                val targetTxt = if (selectedDhikr.target > 0) " / ${selectedDhikr.target}" else " / ∞"
+                                Text(
+                                    text = "${selectedDhikr.count}$targetTxt",
+                                    style = TextStyle(
+                                        color = androidx.glance.unit.ColorProvider(Color(0xFFD4AF37)),
+                                        fontSize = 28.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
                                 )
-                            )
-                        }
 
-                        Spacer(modifier = GlanceModifier.height(2.dp))
+                                Spacer(modifier = GlanceModifier.height(12.dp))
+
+                                // ── Increment button at the bottom
+                                Box(
+                                    modifier = GlanceModifier
+                                        .fillMaxWidth()
+                                        .background(Color(0xFFD4AF37))
+                                        .cornerRadius(16.dp)
+                                        .padding(vertical = 16.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = "سَبِّحْ",
+                                        style = TextStyle(
+                                            color = androidx.glance.unit.ColorProvider(Color.Black),
+                                            fontSize = 18.sp,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }

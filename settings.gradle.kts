@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DhikrTasbih"
 include(":app")
+include(":wear")

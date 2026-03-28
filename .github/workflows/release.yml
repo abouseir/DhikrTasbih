@@ -29,7 +29,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew assembleRelease --stacktrace || { echo "Gradle build failed"; exit 1; }
-          ls -R app/build/outputs/apk || echo "No APK directory found"
+          ls -R app/build/outputs/apk wear/build/outputs/apk || echo "No APK directory found"
 
       - name: Set up Keystore
         run: |
@@ -63,6 +63,18 @@ jobs:
             --key-pass pass:${{ secrets.KEY_PASSWORD }} \
             --out app-release.apk \
             app/build/outputs/apk/release/app-release-unsigned.apk
+            
+          if [ -f wear/build/outputs/apk/release/wear-release-unsigned.apk ]; then
+            $APKSIGNER sign \
+              --ks $RUNNER_TEMP/keystores/keystore.jks \
+              --ks-key-alias ${{ secrets.KEY_ALIAS }} \
+              --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
+              --key-pass pass:${{ secrets.KEY_PASSWORD }} \
+              --out wear-release.apk \
+              wear/build/outputs/apk/release/wear-release-unsigned.apk
+          else
+            echo "Wear APK not found, skipping signature"
+          fi
 
       - name: Clean Up Keystore
         if: always()
@@ -73,7 +85,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: apk-artifact
-          path: app-release.apk
+          path: |
+            app-release.apk
+            wear-release.apk*
           compression-level: 5
 
   release:
@@ -100,6 +114,9 @@ jobs:
         run: |
           TAG_NAME="${{ github.event.inputs.release_tag || github.ref_name }}"
           mv app-release.apk "DhikrTasbih_${TAG_NAME}.apk"
+          if [ -f wear-release.apk ]; then
+            mv wear-release.apk "DhikrTasbih_Wear_${TAG_NAME}.apk"
+          fi
           if [ ! -f "DhikrTasbih_${TAG_NAME}.apk" ]; then
             echo "Failed to rename APK"
             exit 1
@@ -118,5 +135,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.release_tag || github.ref_name }}
-          files: DhikrTasbih_${{ github.event.inputs.release_tag || github.ref_name }}.apk
+          files: |
+            DhikrTasbih_${{ github.event.inputs.release_tag || github.ref_name }}.apk
+            DhikrTasbih_Wear_${{ github.event.inputs.release_tag || github.ref_name }}.apk
           body_path: CHANGE.txt
