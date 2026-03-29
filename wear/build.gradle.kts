@@ -42,11 +42,14 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
-
-    // Wear OS
+    
+    // Wear OS specifically
     implementation("androidx.wear.compose:compose-material:1.3.0")
     implementation("androidx.wear.compose:compose-foundation:1.3.0")
-
-    // Material icons for the reset button
-    implementation("androidx.compose.material:material-icons-core")
+    implementation("com.google.android.horologist:horologist-compose-layout:0.5.21")
+    implementation("com.google.android.horologist:horologist-compose-material:0.5.21")
+    implementation("androidx.glance:glance-wear-tiles:1.0.0-alpha05")
+    
+    // Shared Data (Assuming standard Datastore)
+    implementation(libs.androidx.datastore.preferences)
 }

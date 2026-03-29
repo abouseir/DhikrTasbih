@@ -10,6 +10,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,11 +20,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.wear.compose.material.Text
-import androidx.wear.compose.material.MaterialTheme
+import androidx.wear.compose.material.Button
+import androidx.wear.compose.material.ButtonDefaults
 import androidx.wear.compose.material.Icon
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Refresh
+import androidx.wear.compose.material.MaterialTheme
+import androidx.wear.compose.material.Text
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,44 +42,57 @@ fun WearApp() {
     var count by remember { mutableStateOf(prefs.getInt("count", 0)) }
 
     MaterialTheme {
-        Box(
+        Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Black)
-                .clickable {
-                    count++
-                    prefs.edit().putInt("count", count).apply()
-                    vibrateWearDevice(context, 30L)
-                },
-            contentAlignment = Alignment.Center
+                .background(Color.Black),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Main counter
-            Text(
-                text = count.toString(),
-                color = Color(0xFFD4AF37),
-                fontSize = 72.sp,
-                fontWeight = FontWeight.Bold
-            )
-
-            // Reset button at bottom
+            // Clickable area for counting
             Box(
                 modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .padding(bottom = 16.dp)
-                    .size(40.dp)
+                    .weight(1f)
+                    .fillMaxWidth()
                     .clickable {
-                        count = 0
-                        prefs.edit().putInt("count", 0).apply()
-                        vibrateWearDevice(context, 50L)
+                        count++
+                        prefs.edit().putInt("count", count).apply()
+                        vibrateWearDevice(context, 30L)
                     },
                 contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    imageVector = Icons.Default.Refresh,
-                    contentDescription = "Reset",
-                    tint = Color(0xFF888888),
-                    modifier = Modifier.size(24.dp)
+                Text(
+                    text = count.toString(),
+                    color = Color(0xFFD4AF37), // Gold color from premium theme
+                    style = MaterialTheme.typography.display1.copy(
+                        fontWeight = FontWeight.Bold
+                    )
                 )
+            }
+
+            // Reset Button Area
+            Box(
+                modifier = Modifier
+                    .padding(bottom = 16.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Button(
+                    onClick = {
+                        count = 0
+                        prefs.edit().putInt("count", count).apply()
+                        vibrateWearDevice(context, 50L)
+                    },
+                    modifier = Modifier.size(48.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = Color(0xFF333333),
+                        contentColor = Color(0xFFD4AF37)
+                    )
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Refresh,
+                        contentDescription = "Reset",
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
             }
         }
     }
