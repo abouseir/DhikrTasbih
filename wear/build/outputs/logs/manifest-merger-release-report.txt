@@ -1,0 +1,511 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:2:1-42:12
+MERGED from [com.google.android.horologist:horologist-compose-material:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/7d0040ca643d7a77515c6040aee13505/transformed/horologist-compose-material-0.5.21/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.horologist:horologist-compose-layout:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/9723bd5cf2035dce859386b8826e2f14/transformed/horologist-compose-layout-0.5.21/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.wear.compose:compose-material-core:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/3046982d88d4f4855a439e6761ceb32d/transformed/compose-material-core-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.wear.compose:compose-material:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/bed9c7a66d30247eb3d4dc31145de04e/transformed/compose-material-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.wear.compose:compose-foundation:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/81261a44ae9952c3bdef0e18d9bb6006/transformed/compose-foundation-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.wear.compose:compose-navigation:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/9cfcb06a08e7e1d985f76c2039496136/transformed/compose-navigation-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/59539c77f05462afdf409b79d4e4989e/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/0d6bf1192972e9f27e06e324952a3b18/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/1fceba788ac8e374ffe344016d3119d4/transformed/navigation-common-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/2a0d96a918b989fc6cbadbbfca55e23c/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/d700a78345aaa663e562585e40861bc1/transformed/navigation-compose-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/8ee005e1bf387b2da8b57ad976a6241b/transformed/navigation-ui-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/cbd167d9fb6aa94d69d2032ee3cef6ce/transformed/navigation-ui-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.4.0-beta01] /home/ayoub/.gradle/caches/8.13/transforms/9387e57c75f42eb726c9adfdce7bbf0f/transformed/material-1.4.0-beta01/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/a663a9a59e1a26d99cdafbd508bfc52f/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/ayoub/.gradle/caches/8.13/transforms/aee9458a8006921c89be0f6c48c9509d/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/ayoub/.gradle/caches/8.13/transforms/79456f1384f1695c39358bc013a4262e/transformed/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.4] /home/ayoub/.gradle/caches/8.13/transforms/4c6b9a68950a172f9fd05326db332b53/transformed/fragment-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/6e97856dc362944cf455d5138557066a/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.horologist:horologist-images-base:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/4ed14e7f49ca0386a7c4bb574a27d72e/transformed/horologist-images-base-0.5.21/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.paging:paging-compose:3.2.1] /home/ayoub/.gradle/caches/8.13/transforms/d8441b219e209daba50cc0b8fb187638/transformed/paging-compose-3.2.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/1702587462024a63d9e7c04d7819009d/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.glance:glance-wear-tiles:1.0.0-alpha05] /home/ayoub/.gradle/caches/8.13/transforms/6e4f024facadd30f4fd99e6e029420d9/transformed/glance-wear-tiles-1.0.0-alpha05/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.glance:glance:1.0.0-alpha05] /home/ayoub/.gradle/caches/8.13/transforms/91c34fdf8429853d025b6c072187f608/transformed/glance-1.0.0-alpha05/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/31d83bd84bfe684916fd891b4bd97658/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/c8f92d0827ab60dbd57032af8cff8087/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/99cfa9375efa7436e23780086b5f86b0/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/fa8bf4ae5612f3f188a33ce6255fcb11/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/d20ca4c76ae31b9c9f9de60eff77a7fe/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f9362295e2650731ee45f368f779f75c/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/adc604a04eb9c0cc9cf865bb13845449/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/1db8dc12427e3f187a6f224d92e6922f/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/123ff10b4e6060523b8bad274b415bfe/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/cb4fc6bdce5d978cc0113898914959d9/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/7632ec4e09e9e8362c5183995921f3ef/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/2098e529a5d004cae6ae3b6770d543d3/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/41fdb55cd8251d59a32b895ec07880d9/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/6eeaf71c9a88746693d71a0073a783ba/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/f0713acc46bf14fc0cdb3ce86aecd7d9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/6e6f2ad94f7fa9f9739d6502705d0518/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/a27eb9ae756a94a5414ff52493979ee6/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/8dd6db4f2ca4cb25932342839dc79d64/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/036fcbebecc977ecbde6e0a70f604444/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/7bc4465c6a50e61cd37eb2ddb825d23f/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/ceee88dc548248136a074405756a3dab/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/a52e2d4d67dbe9c6986751506ffa8af1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/6f85a0fc482942f90738ae920a2392ca/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/d48e5c2620f0c5eb866108ba44ed9eed/transformed/transition-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/ayoub/.gradle/caches/8.13/transforms/de4e088812950666ad50e747fae9d445/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/d0c535bb74ea44ae8bee403216d965c0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/34c20aa010b2ca32d1e7f93fd082613f/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/ayoub/.gradle/caches/8.13/transforms/a0332c0af4988f80175bb8dd13c0d58f/transformed/appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/805e6b9b3b80bc3dfe70425b9c157cab/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/b23211eaab3120dd181adeec9fe7b13d/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/ayoub/.gradle/caches/8.13/transforms/ad8536f25617462c64ebf74c1ce826e4/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/ayoub/.gradle/caches/8.13/transforms/83889acfb7d395105e5f9b414a7e5604/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/3f1af7d6a71999b63771ed4c71b7b7b8/transformed/lifecycle-viewmodel-2.8.3/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/6718aae672c234ea1a5b38f5f8b016ec/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/72bf2e72e2030129c355632d24a50256/transformed/lifecycle-livedata-core-ktx-2.8.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/f6e1cf3aa42fcd17a05708f7e4e7ab96/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4151acbe93d4c75a66f9c624eda57bc7/transformed/lifecycle-runtime-2.8.3/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4c10d5f801ce87ae38681a31d83872e9/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4491b30a9d85912aa12e9419de79d684/transformed/lifecycle-viewmodel-ktx-2.8.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/3ae66fdf3b3552c0a85fa339673a3478/transformed/lifecycle-viewmodel-savedstate-2.8.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/7780c0771dd44d37d0311065858ff8cf/transformed/lifecycle-service-2.8.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/cba9d12b11fb846586ab096859e70b38/transformed/lifecycle-livedata-core-2.8.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/1a76e057dad11224c24571a8b6c8d185/transformed/lifecycle-livedata-2.8.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/ab3824741e031924cba232581fe3ce41/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/c37a670a90591c53241f2036db58cb50/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/bf076b132b3f289da557a70993dec08a/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/88ba3b195271f5ad85eacf452a3d4ddf/transformed/activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/2c367c423aecc6e3b3e70238a8222766/transformed/activity-compose-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/6caf4c16aab56711a459530a00cbc7b6/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/4692581c5c0aea2e3d25d4fdfce90b67/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/7201814bb092d48b7c22dc68e7479a9a/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/c7efdc0fc269ede497190ca9ecb84c01/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/729a091154c847670fd815d70cce1818/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/ayoub/.gradle/caches/8.13/transforms/33f8b29252837065ae0f2c4d92eed7e5/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/bcbf37218e8f8f19ef4ca33f17573fc6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/dcbd9277913e6e8efd94f28de9d27d93/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/338eea6c017ba0618b1350d0ba4d9e30/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/ayoub/.gradle/caches/8.13/transforms/b753580d648308c75b0c36dd964279fa/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/d5583cc296ae78b26fad296c0f1b90cb/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/72d6dd58e304b3c1d244319afbb0796c/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/735cd1cd0ac7ff4a514b449514a6d7f5/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/05f27e8494f3d7773bfe87d6698789f0/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/0b94f536a3584b52b7f721048a3db826/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+	package
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.type.watch
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:5:5-64
+MERGED from [com.google.android.horologist:horologist-compose-material:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/7d0040ca643d7a77515c6040aee13505/transformed/horologist-compose-material-0.5.21/AndroidManifest.xml:25:5-64
+MERGED from [com.google.android.horologist:horologist-compose-material:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/7d0040ca643d7a77515c6040aee13505/transformed/horologist-compose-material-0.5.21/AndroidManifest.xml:25:5-64
+MERGED from [com.google.android.horologist:horologist-compose-layout:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/9723bd5cf2035dce859386b8826e2f14/transformed/horologist-compose-layout-0.5.21/AndroidManifest.xml:25:5-64
+MERGED from [com.google.android.horologist:horologist-compose-layout:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/9723bd5cf2035dce859386b8826e2f14/transformed/horologist-compose-layout-0.5.21/AndroidManifest.xml:25:5-64
+MERGED from [com.google.android.horologist:horologist-images-base:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/4ed14e7f49ca0386a7c4bb574a27d72e/transformed/horologist-images-base-0.5.21/AndroidManifest.xml:25:5-64
+MERGED from [com.google.android.horologist:horologist-images-base:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/4ed14e7f49ca0386a7c4bb574a27d72e/transformed/horologist-images-base-0.5.21/AndroidManifest.xml:25:5-64
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:5:19-61
+uses-permission#android.permission.VIBRATE
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:6:22-63
+application
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:8:5-40:19
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:8:5-40:19
+MERGED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.material:material:1.4.0-beta01] /home/ayoub/.gradle/caches/8.13/transforms/9387e57c75f42eb726c9adfdce7bbf0f/transformed/material-1.4.0-beta01/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0-beta01] /home/ayoub/.gradle/caches/8.13/transforms/9387e57c75f42eb726c9adfdce7bbf0f/transformed/material-1.4.0-beta01/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/ayoub/.gradle/caches/8.13/transforms/aee9458a8006921c89be0f6c48c9509d/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/ayoub/.gradle/caches/8.13/transforms/aee9458a8006921c89be0f6c48c9509d/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/bcbf37218e8f8f19ef4ca33f17573fc6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/bcbf37218e8f8f19ef4ca33f17573fc6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:11:9-36
+	android:icon
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:13:9-59
+meta-data#com.google.android.wearable.standalone
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:16:9-18:36
+	android:value
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:18:13-33
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:17:13-66
+activity#com.example.dhikrtasbih.wear.MainActivity
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:20:9-29:20
+	android:exported
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:22:13-36
+	android:theme
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:24:13-63
+	android:taskAffinity
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:25:13-28:29
+action#android.intent.action.MAIN
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:27:27-74
+service#com.example.dhikrtasbih.wear.TasbihTileService
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:31:9-38:19
+	android:exported
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:33:13-36
+	android:permission
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:34:13-91
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:32:13-46
+intent-filter#action:name:androidx.wear.tiles.action.BIND_TILE_PROVIDER
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:35:13-37:29
+action#androidx.wear.tiles.action.BIND_TILE_PROVIDER
+ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:36:17-88
+	android:name
+		ADDED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml:36:25-85
+uses-sdk
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+MERGED from [com.google.android.horologist:horologist-compose-material:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/7d0040ca643d7a77515c6040aee13505/transformed/horologist-compose-material-0.5.21/AndroidManifest.xml:21:5-23:42
+MERGED from [com.google.android.horologist:horologist-compose-material:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/7d0040ca643d7a77515c6040aee13505/transformed/horologist-compose-material-0.5.21/AndroidManifest.xml:21:5-23:42
+MERGED from [com.google.android.horologist:horologist-compose-layout:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/9723bd5cf2035dce859386b8826e2f14/transformed/horologist-compose-layout-0.5.21/AndroidManifest.xml:21:5-23:42
+MERGED from [com.google.android.horologist:horologist-compose-layout:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/9723bd5cf2035dce859386b8826e2f14/transformed/horologist-compose-layout-0.5.21/AndroidManifest.xml:21:5-23:42
+MERGED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.wear.compose:compose-material-core:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/3046982d88d4f4855a439e6761ceb32d/transformed/compose-material-core-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-material-core:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/3046982d88d4f4855a439e6761ceb32d/transformed/compose-material-core-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-material:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/bed9c7a66d30247eb3d4dc31145de04e/transformed/compose-material-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-material:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/bed9c7a66d30247eb3d4dc31145de04e/transformed/compose-material-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-foundation:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/81261a44ae9952c3bdef0e18d9bb6006/transformed/compose-foundation-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-foundation:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/81261a44ae9952c3bdef0e18d9bb6006/transformed/compose-foundation-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-navigation:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/9cfcb06a08e7e1d985f76c2039496136/transformed/compose-navigation-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.compose:compose-navigation:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/9cfcb06a08e7e1d985f76c2039496136/transformed/compose-navigation-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/59539c77f05462afdf409b79d4e4989e/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/59539c77f05462afdf409b79d4e4989e/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/0d6bf1192972e9f27e06e324952a3b18/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/0d6bf1192972e9f27e06e324952a3b18/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/1fceba788ac8e374ffe344016d3119d4/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/1fceba788ac8e374ffe344016d3119d4/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/2a0d96a918b989fc6cbadbbfca55e23c/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/2a0d96a918b989fc6cbadbbfca55e23c/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/d700a78345aaa663e562585e40861bc1/transformed/navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/d700a78345aaa663e562585e40861bc1/transformed/navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/8ee005e1bf387b2da8b57ad976a6241b/transformed/navigation-ui-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/8ee005e1bf387b2da8b57ad976a6241b/transformed/navigation-ui-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/cbd167d9fb6aa94d69d2032ee3cef6ce/transformed/navigation-ui-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.7.6] /home/ayoub/.gradle/caches/8.13/transforms/cbd167d9fb6aa94d69d2032ee3cef6ce/transformed/navigation-ui-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0-beta01] /home/ayoub/.gradle/caches/8.13/transforms/9387e57c75f42eb726c9adfdce7bbf0f/transformed/material-1.4.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0-beta01] /home/ayoub/.gradle/caches/8.13/transforms/9387e57c75f42eb726c9adfdce7bbf0f/transformed/material-1.4.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/a663a9a59e1a26d99cdafbd508bfc52f/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/a663a9a59e1a26d99cdafbd508bfc52f/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/ayoub/.gradle/caches/8.13/transforms/aee9458a8006921c89be0f6c48c9509d/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/ayoub/.gradle/caches/8.13/transforms/aee9458a8006921c89be0f6c48c9509d/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/ayoub/.gradle/caches/8.13/transforms/79456f1384f1695c39358bc013a4262e/transformed/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/ayoub/.gradle/caches/8.13/transforms/79456f1384f1695c39358bc013a4262e/transformed/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.4] /home/ayoub/.gradle/caches/8.13/transforms/4c6b9a68950a172f9fd05326db332b53/transformed/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.4] /home/ayoub/.gradle/caches/8.13/transforms/4c6b9a68950a172f9fd05326db332b53/transformed/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/6e97856dc362944cf455d5138557066a/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/6e97856dc362944cf455d5138557066a/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.horologist:horologist-images-base:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/4ed14e7f49ca0386a7c4bb574a27d72e/transformed/horologist-images-base-0.5.21/AndroidManifest.xml:21:5-23:42
+MERGED from [com.google.android.horologist:horologist-images-base:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/4ed14e7f49ca0386a7c4bb574a27d72e/transformed/horologist-images-base-0.5.21/AndroidManifest.xml:21:5-23:42
+MERGED from [androidx.paging:paging-compose:3.2.1] /home/ayoub/.gradle/caches/8.13/transforms/d8441b219e209daba50cc0b8fb187638/transformed/paging-compose-3.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.paging:paging-compose:3.2.1] /home/ayoub/.gradle/caches/8.13/transforms/d8441b219e209daba50cc0b8fb187638/transformed/paging-compose-3.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/1702587462024a63d9e7c04d7819009d/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/1702587462024a63d9e7c04d7819009d/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.glance:glance-wear-tiles:1.0.0-alpha05] /home/ayoub/.gradle/caches/8.13/transforms/6e4f024facadd30f4fd99e6e029420d9/transformed/glance-wear-tiles-1.0.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.glance:glance-wear-tiles:1.0.0-alpha05] /home/ayoub/.gradle/caches/8.13/transforms/6e4f024facadd30f4fd99e6e029420d9/transformed/glance-wear-tiles-1.0.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.glance:glance:1.0.0-alpha05] /home/ayoub/.gradle/caches/8.13/transforms/91c34fdf8429853d025b6c072187f608/transformed/glance-1.0.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.glance:glance:1.0.0-alpha05] /home/ayoub/.gradle/caches/8.13/transforms/91c34fdf8429853d025b6c072187f608/transformed/glance-1.0.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/31d83bd84bfe684916fd891b4bd97658/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/31d83bd84bfe684916fd891b4bd97658/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/c8f92d0827ab60dbd57032af8cff8087/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/c8f92d0827ab60dbd57032af8cff8087/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/99cfa9375efa7436e23780086b5f86b0/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/99cfa9375efa7436e23780086b5f86b0/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/fa8bf4ae5612f3f188a33ce6255fcb11/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/fa8bf4ae5612f3f188a33ce6255fcb11/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/d20ca4c76ae31b9c9f9de60eff77a7fe/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/d20ca4c76ae31b9c9f9de60eff77a7fe/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f9362295e2650731ee45f368f779f75c/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f9362295e2650731ee45f368f779f75c/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/adc604a04eb9c0cc9cf865bb13845449/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/adc604a04eb9c0cc9cf865bb13845449/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/1db8dc12427e3f187a6f224d92e6922f/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/1db8dc12427e3f187a6f224d92e6922f/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/123ff10b4e6060523b8bad274b415bfe/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/123ff10b4e6060523b8bad274b415bfe/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/cb4fc6bdce5d978cc0113898914959d9/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/cb4fc6bdce5d978cc0113898914959d9/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/7632ec4e09e9e8362c5183995921f3ef/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/7632ec4e09e9e8362c5183995921f3ef/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/2098e529a5d004cae6ae3b6770d543d3/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/2098e529a5d004cae6ae3b6770d543d3/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/41fdb55cd8251d59a32b895ec07880d9/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/41fdb55cd8251d59a32b895ec07880d9/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/6eeaf71c9a88746693d71a0073a783ba/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/6eeaf71c9a88746693d71a0073a783ba/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/f0713acc46bf14fc0cdb3ce86aecd7d9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/f0713acc46bf14fc0cdb3ce86aecd7d9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/6e6f2ad94f7fa9f9739d6502705d0518/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/6e6f2ad94f7fa9f9739d6502705d0518/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/a27eb9ae756a94a5414ff52493979ee6/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/a27eb9ae756a94a5414ff52493979ee6/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/8dd6db4f2ca4cb25932342839dc79d64/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/8dd6db4f2ca4cb25932342839dc79d64/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/036fcbebecc977ecbde6e0a70f604444/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/036fcbebecc977ecbde6e0a70f604444/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/7bc4465c6a50e61cd37eb2ddb825d23f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/7bc4465c6a50e61cd37eb2ddb825d23f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/ceee88dc548248136a074405756a3dab/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/ceee88dc548248136a074405756a3dab/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/a52e2d4d67dbe9c6986751506ffa8af1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/a52e2d4d67dbe9c6986751506ffa8af1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/6f85a0fc482942f90738ae920a2392ca/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/6f85a0fc482942f90738ae920a2392ca/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/d48e5c2620f0c5eb866108ba44ed9eed/transformed/transition-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/d48e5c2620f0c5eb866108ba44ed9eed/transformed/transition-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/ayoub/.gradle/caches/8.13/transforms/de4e088812950666ad50e747fae9d445/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/ayoub/.gradle/caches/8.13/transforms/de4e088812950666ad50e747fae9d445/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/d0c535bb74ea44ae8bee403216d965c0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/d0c535bb74ea44ae8bee403216d965c0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/34c20aa010b2ca32d1e7f93fd082613f/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/34c20aa010b2ca32d1e7f93fd082613f/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/ayoub/.gradle/caches/8.13/transforms/a0332c0af4988f80175bb8dd13c0d58f/transformed/appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/ayoub/.gradle/caches/8.13/transforms/a0332c0af4988f80175bb8dd13c0d58f/transformed/appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/805e6b9b3b80bc3dfe70425b9c157cab/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/805e6b9b3b80bc3dfe70425b9c157cab/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/b23211eaab3120dd181adeec9fe7b13d/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/ayoub/.gradle/caches/8.13/transforms/b23211eaab3120dd181adeec9fe7b13d/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/ayoub/.gradle/caches/8.13/transforms/ad8536f25617462c64ebf74c1ce826e4/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/ayoub/.gradle/caches/8.13/transforms/ad8536f25617462c64ebf74c1ce826e4/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/ayoub/.gradle/caches/8.13/transforms/83889acfb7d395105e5f9b414a7e5604/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/ayoub/.gradle/caches/8.13/transforms/83889acfb7d395105e5f9b414a7e5604/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/3f1af7d6a71999b63771ed4c71b7b7b8/transformed/lifecycle-viewmodel-2.8.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/3f1af7d6a71999b63771ed4c71b7b7b8/transformed/lifecycle-viewmodel-2.8.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/6718aae672c234ea1a5b38f5f8b016ec/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/6718aae672c234ea1a5b38f5f8b016ec/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/72bf2e72e2030129c355632d24a50256/transformed/lifecycle-livedata-core-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/72bf2e72e2030129c355632d24a50256/transformed/lifecycle-livedata-core-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/f6e1cf3aa42fcd17a05708f7e4e7ab96/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/f6e1cf3aa42fcd17a05708f7e4e7ab96/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4151acbe93d4c75a66f9c624eda57bc7/transformed/lifecycle-runtime-2.8.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4151acbe93d4c75a66f9c624eda57bc7/transformed/lifecycle-runtime-2.8.3/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4c10d5f801ce87ae38681a31d83872e9/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4c10d5f801ce87ae38681a31d83872e9/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4491b30a9d85912aa12e9419de79d684/transformed/lifecycle-viewmodel-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/4491b30a9d85912aa12e9419de79d684/transformed/lifecycle-viewmodel-ktx-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/3ae66fdf3b3552c0a85fa339673a3478/transformed/lifecycle-viewmodel-savedstate-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/3ae66fdf3b3552c0a85fa339673a3478/transformed/lifecycle-viewmodel-savedstate-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/7780c0771dd44d37d0311065858ff8cf/transformed/lifecycle-service-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/7780c0771dd44d37d0311065858ff8cf/transformed/lifecycle-service-2.8.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/cba9d12b11fb846586ab096859e70b38/transformed/lifecycle-livedata-core-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/cba9d12b11fb846586ab096859e70b38/transformed/lifecycle-livedata-core-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/1a76e057dad11224c24571a8b6c8d185/transformed/lifecycle-livedata-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/1a76e057dad11224c24571a8b6c8d185/transformed/lifecycle-livedata-2.8.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/ab3824741e031924cba232581fe3ce41/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/ab3824741e031924cba232581fe3ce41/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/c37a670a90591c53241f2036db58cb50/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/c37a670a90591c53241f2036db58cb50/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/bf076b132b3f289da557a70993dec08a/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/bf076b132b3f289da557a70993dec08a/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/88ba3b195271f5ad85eacf452a3d4ddf/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/88ba3b195271f5ad85eacf452a3d4ddf/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/2c367c423aecc6e3b3e70238a8222766/transformed/activity-compose-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.0] /home/ayoub/.gradle/caches/8.13/transforms/2c367c423aecc6e3b3e70238a8222766/transformed/activity-compose-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/6caf4c16aab56711a459530a00cbc7b6/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/6caf4c16aab56711a459530a00cbc7b6/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/4692581c5c0aea2e3d25d4fdfce90b67/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/4692581c5c0aea2e3d25d4fdfce90b67/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/7201814bb092d48b7c22dc68e7479a9a/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/7201814bb092d48b7c22dc68e7479a9a/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/c7efdc0fc269ede497190ca9ecb84c01/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/c7efdc0fc269ede497190ca9ecb84c01/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/729a091154c847670fd815d70cce1818/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/729a091154c847670fd815d70cce1818/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/ayoub/.gradle/caches/8.13/transforms/33f8b29252837065ae0f2c4d92eed7e5/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/ayoub/.gradle/caches/8.13/transforms/33f8b29252837065ae0f2c4d92eed7e5/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/bcbf37218e8f8f19ef4ca33f17573fc6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/bcbf37218e8f8f19ef4ca33f17573fc6/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/dcbd9277913e6e8efd94f28de9d27d93/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/dcbd9277913e6e8efd94f28de9d27d93/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/338eea6c017ba0618b1350d0ba4d9e30/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/338eea6c017ba0618b1350d0ba4d9e30/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/ayoub/.gradle/caches/8.13/transforms/b753580d648308c75b0c36dd964279fa/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/ayoub/.gradle/caches/8.13/transforms/b753580d648308c75b0c36dd964279fa/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/d5583cc296ae78b26fad296c0f1b90cb/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/d5583cc296ae78b26fad296c0f1b90cb/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/72d6dd58e304b3c1d244319afbb0796c/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/72d6dd58e304b3c1d244319afbb0796c/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/735cd1cd0ac7ff4a514b449514a6d7f5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/735cd1cd0ac7ff4a514b449514a6d7f5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/05f27e8494f3d7773bfe87d6698789f0/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/05f27e8494f3d7773bfe87d6698789f0/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/0b94f536a3584b52b7f721048a3db826/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/0b94f536a3584b52b7f721048a3db826/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+	tools:ignore
+		ADDED from [com.google.android.horologist:horologist-compose-material:0.5.21] /home/ayoub/.gradle/caches/8.13/transforms/7d0040ca643d7a77515c6040aee13505/transformed/horologist-compose-material-0.5.21/AndroidManifest.xml:23:9-39
+	android:minSdkVersion
+		INJECTED from /home/ayoub/AndroidStudioProjects/DhikrTasbih/wear/src/main/AndroidManifest.xml
+uses-library#com.google.android.wearable
+ADDED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.wear:wear:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/331ad37ec4792a3fd90ab0539aaf04dc/transformed/wear-1.3.0/AndroidManifest.xml:24:13-55
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/ayoub/.gradle/caches/8.13/transforms/f7fe52cddf9667126fe280dd7acbe9c2/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ayoub/.gradle/caches/8.13/transforms/9644f546727099409fef0f345d48c02b/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/ayoub/.gradle/caches/8.13/transforms/31b9b83f235654fd986a921a8935d246/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.example.dhikrtasbih.wear.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.example.dhikrtasbih.wear.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/ayoub/.gradle/caches/8.13/transforms/6da2b066af5851f457c69ee23edaf1f0/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.3] /home/ayoub/.gradle/caches/8.13/transforms/30a384f8cc04f54f957fb95316b475c8/transformed/lifecycle-process-2.8.3/AndroidManifest.xml:30:17-78
+queries
+ADDED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:9:5-13:15
+intent#action:name:androidx.wear.tiles.action.BIND_UPDATE_REQUESTER
+ADDED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:10:9-12:18
+action#androidx.wear.tiles.action.BIND_UPDATE_REQUESTER
+ADDED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:11:13-87
+	android:name
+		ADDED from [androidx.wear.tiles:tiles:1.0.0] /home/ayoub/.gradle/caches/8.13/transforms/59bbbfa3008f5c6c648f9cef088dc118/transformed/tiles-1.0.0/AndroidManifest.xml:11:21-84
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ayoub/.gradle/caches/8.13/transforms/ce0111b43a72472c3023950a80094f5e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

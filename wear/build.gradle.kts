@@ -52,4 +52,7 @@ dependencies {
     
     // Shared Data (Assuming standard Datastore)
     implementation(libs.androidx.datastore.preferences)
+
+    // Material icons for the reset button
+    implementation("androidx.compose.material:material-icons-core")
 }
