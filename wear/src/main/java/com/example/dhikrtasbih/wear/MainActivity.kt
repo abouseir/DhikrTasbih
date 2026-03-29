@@ -147,126 +147,72 @@ fun CounterScreen(categoryId: Int) {
         count = prefs.getInt("count_${categoryId}_${items[itemIndex].id}", 0)
     }
 
-    val scrollState = rememberScrollState()
-    val focusRequester = remember { FocusRequester() }
-    val coroutineScope = rememberCoroutineScope()
-
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Black)
-            .onRotaryScrollEvent { event ->
-                coroutineScope.launch {
-                    scrollState.scrollBy(event.verticalScrollPixels)
+            .clickable {
+                if (currentItem.target == 0 || count < currentItem.target) {
+                    count++
+                    prefs.edit().putInt("count_${categoryId}_${currentItem.id}", count).apply()
+                    vibrateWearDevice(context, 30L)
+                    
+                    if (count == currentItem.target && itemIndex < items.size - 1) {
+                        itemIndex++
+                        prefs.edit().putInt("index_$categoryId", itemIndex).apply()
+                    }
+                } else {
+                    vibrateWearDevice(context, 100L)
                 }
-                true
-            }
-            .focusRequester(focusRequester)
-            .focusable(),
+            },
         contentAlignment = Alignment.Center
     ) {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Top
-        ) {
-            Spacer(modifier = Modifier.height(16.dp))
-
-            // Position and Count indicator
-            val targetStr = if (currentItem.target > 0) "/${currentItem.target}" else "/∞"
-            Text(
-                text = "${itemIndex + 1}/${items.size}  •  $count$targetStr",
-                color = Color(0xFF888888),
-                fontSize = 11.sp,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
-            )
-
-            Spacer(modifier = Modifier.height(4.dp))
-            
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    imageVector = Icons.Default.KeyboardArrowRight,
-                    contentDescription = "Previous",
-                    tint = Color(0xFFD4AF37),
-                    modifier = Modifier.size(28.dp).clickable {
-                        itemIndex = if (itemIndex - 1 < 0) items.size - 1 else itemIndex - 1
-                        prefs.edit().putInt("index_$categoryId", itemIndex).apply()
-                        vibrateWearDevice(context, 20L)
-                    }.padding(4.dp)
-                )
-                
-                Icon(
-                    imageVector = Icons.Default.Refresh,
-                    contentDescription = "Reset",
-                    tint = Color(0xFF888888),
-                    modifier = Modifier.size(24.dp).clickable {
-                        count = 0
-                        prefs.edit().putInt("count_${categoryId}_${currentItem.id}", 0).apply()
-                        vibrateWearDevice(context, 40L)
-                    }.padding(2.dp)
-                )
-
-                Icon(
-                    imageVector = Icons.Default.KeyboardArrowLeft,
-                    contentDescription = "Next",
-                    tint = Color(0xFFD4AF37),
-                    modifier = Modifier.size(28.dp).clickable {
-                        itemIndex = (itemIndex + 1) % items.size
-                        prefs.edit().putInt("index_$categoryId", itemIndex).apply()
-                        vibrateWearDevice(context, 20L)
-                    }.padding(4.dp)
-                )
-            }
-
-            val textLength = currentItem.textAr.length
-            val dynamicFontSize = if (textLength > 300) 13.sp else if (textLength > 150) 15.sp else if (textLength > 50) 16.sp else 18.sp
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-                    .verticalScroll(scrollState)
-                    .padding(horizontal = 12.dp, vertical = 6.dp),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            if (items.size > 1) {
                 Text(
-                    text = "\u200F${currentItem.textAr}\u200F",
-                    color = Color.White,
-                    fontSize = dynamicFontSize,
-                    textAlign = TextAlign.Center,
+                    text = "${itemIndex + 1} / ${items.size}",
+                    color = Color(0xFF888888),
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+            Text(
+                text = count.toString(),
+                color = Color.White,
+                fontSize = 72.sp,
+                fontWeight = FontWeight.Bold
+            )
+            if (currentItem.target > 0) {
+                Text(
+                    text = "من ${currentItem.target}",
+                    color = Color(0xFFD4AF37),
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
-            Spacer(modifier = Modifier.height(24.dp))
         }
-
+        
         Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight(0.45f)
                 .align(Alignment.BottomCenter)
+                .padding(bottom = 12.dp)
+                .size(48.dp)
                 .clickable {
-                    if (currentItem.target == 0 || count < currentItem.target) {
-                        count++
-                        prefs.edit().putInt("count_${categoryId}_${currentItem.id}", count).apply()
-                        vibrateWearDevice(context, 30L)
-                        if (count == currentItem.target && itemIndex < items.size - 1) {
-                            itemIndex++
-                            prefs.edit().putInt("index_$categoryId", itemIndex).apply()
-                        }
-                    } else {
-                        vibrateWearDevice(context, 100L)
-                    }
-                }
-        )
+                    count = 0
+                    prefs.edit().putInt("count_${categoryId}_${currentItem.id}", 0).apply()
+                    vibrateWearDevice(context, 40L)
+                },
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                imageVector = Icons.Default.Refresh,
+                contentDescription = "Reset",
+                tint = Color(0xFF888888),
+                modifier = Modifier.size(24.dp)
+            )
+        }
     }
-    LaunchedEffect(categoryId, itemIndex) { focusRequester.requestFocus() }
 }
 
 fun vibrateWearDevice(context: Context, durationMs: Long = 30L) {
