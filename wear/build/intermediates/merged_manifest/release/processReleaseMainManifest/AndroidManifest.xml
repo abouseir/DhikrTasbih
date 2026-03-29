@@ -18,12 +18,6 @@
 
     <uses-permission android:name="com.example.dhikrtasbih.wear.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
-    <queries>
-        <intent>
-            <action android:name="androidx.wear.tiles.action.BIND_UPDATE_REQUESTER" />
-        </intent>
-    </queries>
-
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -32,8 +26,6 @@
         android:label="DhikrTasbih"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault" >
-
-        <!-- Uses the same standalone feature flag to ensure it's detected as a Wear app -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
@@ -49,14 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="false" />
-
-        <activity
-            android:name="androidx.compose.ui.tooling.PreviewActivity"
-            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
